@@ -3,9 +3,6 @@ public:
     int min_ban(vector<int>& piles,int h){
         int max = piles[0],min = 1;
         for(int i = 0;i < piles.size();i++){
-            if(piles[i] < min){
-                min = piles[i];
-            }
             if(piles[i] > max){
                 max = piles[i];
             }

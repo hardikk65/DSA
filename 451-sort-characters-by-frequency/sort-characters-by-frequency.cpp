@@ -9,15 +9,15 @@ public:
         for(auto x:freq)tempo.push_back({x.second,x.first});
 
         sort(tempo.rbegin(),tempo.rend());
-        string word = "";
+        s.clear();
 
         for(int i = 0; i < tempo.size();i++){
             for(int j = 0;j < tempo[i].first;j++){
-                word += tempo[i].second;
+                s += tempo[i].second;
             }
         }
 
-        return word;
+        return s;
         
     }
 };

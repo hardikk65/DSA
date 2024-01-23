@@ -9,7 +9,9 @@ public:
         for(int i = 0;i < s.size() - 1;i++){
             (roman[s[i + 1]] > roman[s[i]])?answer -= roman[s[i]]:answer += roman[s[i]];
         }
-        return answer + roman[s[s.size() - 1]];
+        answer += roman[s[s.size() - 1]];
+        roman.clear();
+        return answer;
 
         
     }

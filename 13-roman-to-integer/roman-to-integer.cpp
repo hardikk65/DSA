@@ -7,16 +7,10 @@ public:
         int answer = 0;
 
         for(int i = 0;i < s.size() - 1;i++){
-            if(roman[s[i + 1]] > roman[s[i]]){
-                answer = answer - roman[s[i]];
-            }
-            else{
-                answer = answer + roman[s[i]];
-            }
-
+            if(roman[s[i + 1]] > roman[s[i]])answer -= roman[s[i]];
+            else answer += roman[s[i]];
         }
-        answer = answer + roman[s[s.size() - 1]];
-        return answer;
+        return answer + roman[s[s.size() - 1]];
 
         
     }

@@ -18,7 +18,6 @@ public:
         while(tempo != NULL){
             ListNode* nva = new ListNode();
             curr->val = tempo->val;
-            
             nva->next = curr;
             curr = nva;
             tempo = tempo->next;

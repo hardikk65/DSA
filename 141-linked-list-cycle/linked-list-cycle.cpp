@@ -9,7 +9,6 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        map<ListNode*,int> hash;
         if(head == NULL){
             return false;
         }

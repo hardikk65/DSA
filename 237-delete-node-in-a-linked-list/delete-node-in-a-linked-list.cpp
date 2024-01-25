@@ -21,6 +21,7 @@ public:
         }
 
         prev->next = NULL;
+        delete curr;
         
         
     }

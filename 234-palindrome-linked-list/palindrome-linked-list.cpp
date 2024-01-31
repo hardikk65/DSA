@@ -19,8 +19,8 @@ public:
         ListNode* ptr = head;
 
         while(ptr != NULL){
-            char c = ptr->val + 48;
-            number += c;
+            // char c = ;
+            number += ptr->val + 48;
             ptr = ptr->next;
         }
         

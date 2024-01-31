@@ -57,9 +57,7 @@ public:
             if(o != NULL){
                 o = o->next;
                 o1->next = o;
-                if(o != NULL){
-                    o1 = o;
-                }
+                if(o != NULL)o1 = o;
             }
 
             if(e != NULL){

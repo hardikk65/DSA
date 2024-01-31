@@ -20,7 +20,6 @@ public:
 
         while(fast != NULL){
             fast = fast->next;
-            // prev = slow;
             if(fast != NULL){
                 prev = slow;
                 fast = fast->next;
@@ -28,7 +27,6 @@ public:
             }
             
         }
-
         prev->next = slow->next;
 
         return head;

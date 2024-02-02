@@ -8,15 +8,15 @@ public:
             return false;
         }
 
-        long long sum = 0;
+        // long long sum = 0;
 
 
         while(start <= end){
-            sum = start*start + end*end;
-            if(sum == c){
+            // sum = ;
+            if(start*start + end*end == c){
                 return true;
             }
-            else if(sum > c){
+            else if(start*start + end*end > c){
                 end = end - 1;
             }
             else{

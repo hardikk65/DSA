@@ -5,15 +5,11 @@ public:
         if(nums.size() == 1){
             
             answer.push_back({numeric});
-            
-            if(number != numeric && number != -11){
-                answer.push_back({number});
-                answer.push_back({numeric,number});
-                ptr = 1;
-                return;
-            }
             if(number == -11){
                 return;
+            }
+            if(number != numeric && number != -11){
+                answer.push_back({number});
             }
 
             answer.push_back({numeric,number});

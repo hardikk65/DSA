@@ -9,8 +9,9 @@ public:
             answer.push_back(temp);
             return ;
         }
-      
-        for(int i= 1 ;i<=s.size();i++){
+
+        int n = s.size();
+        for(int i= 1 ;i<=n;i++){
             string og = s.substr(0,i);
             reverse(og.begin(),og.end());
             if(i == s.size() && og == s.substr(0,i)){
@@ -20,7 +21,7 @@ public:
             }
             if(og == s.substr(0,i)){
                 temp.push_back(og);
-                combination(answer,temp,s.substr(i,s.size() - i));
+                combination(answer,temp,s.substr(i,n - i));
                 temp.pop_back();
                 
             }

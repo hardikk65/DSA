@@ -6,12 +6,12 @@ public:
             freq[c]++;
         }
 
-        string p = "";
+        s.clear();
 
         for(int i = 0;i < order.size();i++){
             if(freq[order[i]] != 0){
                 while(freq[order[i]] != 0){
-                    p += order[i];
+                    s += order[i];
                     freq[order[i]]--;
                 }
             }
@@ -20,12 +20,12 @@ public:
         for(auto h: freq){
             if(h.second != 0){
                 while(h.second != 0){
-                    p += h.first;
+                    s += h.first;
                     h.second--;
                 }
             }
         }
-        return p;
+        return s;
         
     }
 };

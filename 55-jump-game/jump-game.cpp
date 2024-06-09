@@ -2,17 +2,16 @@ class Solution {
 public:
     bool canJump(vector<int>& nums) {
         vector<bool> dp(nums.size(),0);
-        dp[nums.size() - 1] = 1;
-        for(int i = nums.size() - 2;i >= 0;i--){
-            int a = nums[i];
-            while(a != 0){
-                if(i + a >= nums.size() - 1){
-                    dp[i] = 1;
-                    break;
-                }
-                dp[i] = dp[i]|dp[i + a];
-                a--;
+    
+        if(nums.size() == 1)return true;
+        int mov = nums.size() -2;
+        int nearest_ptr = nums.size() - 1;
+        while(mov >= 0){
+            if(nums[mov] >= nearest_ptr - mov){
+                dp[mov] = 1;
+                nearest_ptr = mov;
             }
+            mov--;
         }
         return dp[0];
         

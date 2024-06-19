@@ -11,18 +11,11 @@
  */
 class Solution {
 public:
-    void number(TreeNode* root, int* count){
-        if(root == NULL)return;
-        *count = *count + 1;
-        number(root->left,count);
-        number(root->right,count);
-        return;
-    }
+    
     int countNodes(TreeNode* root) {
-        int count = 0;
-        number(root,&count);
+        if(root == NULL)return 0;
+        return 1 + countNodes(root->left) + countNodes(root->right);
 
-        return count;
         
     }
 };

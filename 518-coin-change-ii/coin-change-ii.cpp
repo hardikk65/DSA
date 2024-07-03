@@ -10,8 +10,6 @@ public:
                 answer += f(leftamount - coins[i],i,coins,dp);
             }
         }
-        // if(answer == INT_MAX)return dp[index][leftamount] = INT_MAX;
-
         return dp[index][leftamount] = answer;
     }
     int change(int amount, vector<int>& coins) {

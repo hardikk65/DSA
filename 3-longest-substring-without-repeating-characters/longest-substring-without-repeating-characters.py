@@ -3,7 +3,7 @@ class Solution:
         if len(s) == 0: # If input string is empty return 0
             return 0
 
-        maxlen = -1  # Stores the maximum length of substring. Initialised with -1
+        maxlen = 0  # Stores the maximum length of substring. Initialised with -1
         set_a = set()
         l = 0
 

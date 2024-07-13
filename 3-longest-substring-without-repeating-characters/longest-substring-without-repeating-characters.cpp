@@ -1,19 +1,24 @@
 class Solution {
 public:
-    int lengthOfLongestSubstring(string s) {
-        int ans = 0;
-        map<char,int> freq;
-        for(int i = 0;i < s.size();i++){
-            int start = i;
-            while(start != s.size()){
-                if(freq[s[start]] != 0)break;
-                freq[s[start]]++;
-                ans = max(ans,start - i + 1);
-                start++;
-            }
-            freq.clear();
-        }
-        return ans;
+    int lengthOfLongestSubstring(string str) {
+        if(str.size()==0)
+      return 0;
+  int maxans = INT_MIN;
+  unordered_set < int > set;
+  int l = 0;
+  for (int r = 0; r < str.length(); r++) // outer loop for traversing the string
+  {
+    if (set.find(str[r]) != set.end()) //if duplicate element is found
+    {
+      while (l < r && set.find(str[r]) != set.end()) {
+        set.erase(str[l]);
+        l++;
+      }
+    }
+    set.insert(str[r]);
+    maxans = max(maxans, r - l + 1);
+  }
+  return maxans;
         
     }
 };
